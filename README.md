@@ -14,13 +14,14 @@ MONGODB_URI | mongodb://mongodb:27017/mongeez
 MONGEEZ_LOCATION | file:/var/db/mongeez.xml | spring resource format 
 MONBODB_USERNAME |
 MONBODB_PASSWORD |
+JAVA_OPTS | 
 
-
-JAVA_OPTS
-
-```
--Dspring.profiles.active=without-crendentials
-```
+> Notes for JAVA_OPTS
+>
+>```
+># the production profile is active by default
+>-Dspring.profiles.active=production  
+>```
 
 ## without-credentials
 
@@ -30,13 +31,13 @@ LOG_FILE | mongoseed.log
 LOG_LEVEL_ROOT | INFO
 MONGODB_URI | mongodb://mongodb:27017/mongeez
 MONGEEZ_LOCATION | file:/var/db/mongeez.xml  | spring resource format
+JAVA_OPTS | 
 
-JAVA_OPTS
-
-```
-# the production profile is active by default
--Dspring.profiles.active=production  
-```
+> Notes for JAVA_OPTS
+>
+>```
+>-Dspring.profiles.active=without-crendentials
+>```
 
 # Docker Compose Sample 
 
