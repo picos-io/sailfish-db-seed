@@ -1,12 +1,9 @@
 server:
   port: 80
 
-spring:
-  data:
-    mongodb:
-      uri: ${MONBODB_URI:mongodb://mongodb:27017/mongeez}
-      username: ${MONBODB_USERNAME}
-      password: ${MONBODB_PASSWORD}
-
 mongeez:
   location: ${MONGEEZ_LOCATION:file:/var/db/mongeez.xml}
+
+spring:
+  profiles:
+    active: production
