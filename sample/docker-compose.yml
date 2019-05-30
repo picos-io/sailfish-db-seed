@@ -15,6 +15,6 @@ services:
     volumes:
       - "./db:/var/db"
     environment:
-      MONGODB_URI: "mongodb://mongodb:27017/oauth2"
+      MONGODB_URI: "mongodb://mongodb:27017/sample"
       MOOGEEZ_LOCATION: "file:/var/db/mongeez.xml"
       JAVA_OPTS: "-Dspring.profiles.active=without-credentials"

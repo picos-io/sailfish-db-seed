@@ -10,7 +10,7 @@
             "enabled":true
             });
             db.users.insert({
-            "username" : "demouser",
+            "username" : "sampleuser",
             "displayName":"admin",
             "password" : "$2a$10$IOngSQjUJgLZD25rBMIjUuA00s.9m3h1u/LewPBDoEM27G5yNwP7m",
             "expired":false,
