@@ -10,7 +10,7 @@ env | default value | desc
 ---|---|---
 LOG_FILE | mongoseed.log 
 LOG_LEVEL_ROOT | INFO
-MONBODB_URI | mongodb://mongodb:27017/mongeez
+MONGODB_URI | mongodb://mongodb:27017/mongeez
 MONGEEZ_LOCATION | file:/var/db/mongeez.xml | spring resource format 
 MONBODB_USERNAME |
 MONBODB_PASSWORD |
@@ -28,7 +28,7 @@ env | default value | desc
 ---|---|---
 LOG_FILE | mongoseed.log 
 LOG_LEVEL_ROOT | INFO
-MONBODB_URI | mongodb://mongodb:27017/mongeez
+MONGODB_URI | mongodb://mongodb:27017/mongeez
 MONGEEZ_LOCATION | file:/var/db/mongeez.xml  | spring resource format
 
 JAVA_OPTS
