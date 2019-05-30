@@ -15,7 +15,7 @@ FROM clouthinkin/jre
 
 LABEL maintainer="melthaw@gmail.com"
 
-COPY src/docker/docker-entrypoint.sh /
+COPY mongodb/src/docker/docker-entrypoint.sh /
 
 COPY --from=builder /code/mongodb/build/libs/mongodb-1.0.0-SNAPSHOT.jar /mongodb-1.0.0-SNAPSHOT.jar
 
