@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE"
+    }
+}
+
+allprojects {
+
+    apply plugin: 'idea'
+
+    group = 'io.picos'
+    version "1.0.0-SNAPSHOT"
+
+    repositories {
+        mavenCentral()
+    }
+
+}
+
+ext {
+    set("SPRING_OAUTH2_VERSION", "2.0.8.RELEASE")
+    set("SPRNIG_CLOUD_VERSION", "Edgware.RELEASE")
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: "io.spring.dependency-management"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url "http://nexus.talanlabs.com/content/repositories/releases/"
+        }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-starter-parent:$SPRNIG_CLOUD_VERSION"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:$SPRNIG_CLOUD_VERSION"
+        }
+    }
+
+}

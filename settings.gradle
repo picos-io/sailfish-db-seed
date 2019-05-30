@@ -1,0 +1,3 @@
+rootProject.name = 'sailfish-db-seed'
+include 'mongodb'
+include 'test'

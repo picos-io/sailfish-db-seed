@@ -1,0 +1,15 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter"
+    compile "org.springframework.boot:spring-boot-starter-data-mongodb"
+    compile "io.github.hzpz.spring.boot:mongeez-spring-boot-starter:1.3.0"
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+bootRun {
+    if (project.hasProperty('jvmArgs')) {
+        jvmArgs project.jvmArgs.split('\\s+')
+    }
+}

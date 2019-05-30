@@ -1,0 +1,30 @@
+language: bash
+dist: xenial
+#language: java
+
+sudo: required
+
+notifications:
+  webhooks: https://hook.bearychat.com/=bwBrp/travis/93d020f67c0a20049466b93a0211692c
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+    - dev
+    - release
+
+jobs:
+  include:
+    - stage: deploy
+      script:
+        - docker build --no-cache -f mongodb/src/docker/Dockerfile -t picos/sailfish-mongo-seed --rm=true .
+        - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+        - docker push picos/sailfish-mongo-seed
+        - docker logout
+
+stages:
+  - name: deploy
+    if: branch = master

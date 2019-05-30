@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: mongoseed
+
+logging:
+  file: ${LOG_FILE:mongoseed.log}
+  level:
+    root: ${LOG_LEVEL_ROOT:INFO}
+    io.picos: ${LOG_LEVEL_APP:DEBUG}
