@@ -36,7 +36,7 @@ JAVA_OPTS |
 > Notes for JAVA_OPTS
 >
 >```
->-Dspring.profiles.active=without-crendentials
+>-Dspring.profiles.active=without-credentials
 >```
 
 # Docker Compose Sample 
