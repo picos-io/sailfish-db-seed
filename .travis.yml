@@ -20,9 +20,9 @@ jobs:
   include:
     - stage: deploy
       script:
-        - docker build --no-cache -f mongodb/src/docker/Dockerfile -t picos/sailfish-mongo-seed --rm=true .
+        - docker build --no-cache -f mongodb/src/docker/Dockerfile -t picosio/sailfish-mongo-seed --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-        - docker push picos/sailfish-mongo-seed
+        - docker push picosio/sailfish-mongo-seed
         - docker logout
 
 stages:
