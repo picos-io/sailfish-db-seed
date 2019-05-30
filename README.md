@@ -34,7 +34,8 @@ MONGEEZ_LOCATION | file:/var/db/mongeez.xml  | spring resource format
 JAVA_OPTS
 
 ```
--Dspring.profiles.active=without-crendentials  
+# the production profile is active by default
+-Dspring.profiles.active=production  
 ```
 
 # Docker Compose Sample 
