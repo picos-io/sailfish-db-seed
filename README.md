@@ -1,8 +1,8 @@
 # Overview
 
-A spring boot application with moogeez embeded.
+A Spring Boot application with Moogeez embeded.
 
-# Get Started
+# Spring Profile
 
 ## production
 
