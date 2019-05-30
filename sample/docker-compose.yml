@@ -1,0 +1,20 @@
+version: '3'
+services:
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  mongoseed:
+    container_name: mongoseed
+    image: picosio/sailfish-mongo-seed
+    depends_on:
+      - mongodb
+    volumes:
+      - "./db:/var/db"
+    environment:
+      MONGODB_URI: "mongodb://mongodb:27017/oauth2"
+      MOOGEEZ_LOCATION: "file:/var/db/mongeez.xml"
+      JAVA_OPTS: "-Dspring.profiles.active=without-credentials"
